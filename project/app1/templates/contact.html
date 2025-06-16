@@ -1,0 +1,29 @@
+{% extends "./common.html" %}
+    {% block content %}
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <h1>Contact Form</h1>
+        <form class="form" method="POST" novalidate>
+            {%csrf_token%}
+            {%include "./include/_errors.html"%}
+            <div class="row">
+                {{form_data.as_div}}
+               {% comment %} <div class="col-6 my-3">
+                    <input class="form-control" name="name" type="text" placeholder="Username" />
+                </div>
+                <div class="col-6 my-3">
+                    <input class="form-control" type="email" name="email" placeholder="Email" />
+                </div>
+                <div class="col-12 my-3">
+                    <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
+                </div> {% endcomment %}
+                <center>
+                    <a href="mailto:xyz@gmail.com">
+                        <button  type=" submit"class="btn btn-success px-5">Send</button>
+                    </a>
+                </center> 
+            </div>
+        </form>
+        
+    </div>
+
+    {% endblock %}

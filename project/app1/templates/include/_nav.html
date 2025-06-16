@@ -1,0 +1,15 @@
+<nav class="navbar">
+        <a class="navbar-brand" href="\">Home</a>
+        <div class="nav">
+            <a href="{%url "pricepage" %}" class="nav-link">Pricing</a>
+            <a href="{%url "contactpage" %}" class="nav-link">Contact</a>
+          
+           <li class="nav-item">
+        <a class="nav-link" href="{% url 'register' %}">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+      </li>
+
+        </div>
+    </nav>
